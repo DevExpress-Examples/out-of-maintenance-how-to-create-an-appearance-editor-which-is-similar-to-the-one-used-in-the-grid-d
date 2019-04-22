@@ -1,5 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -13,16 +12,25 @@ Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
 Namespace WindowsApplication3
 	Partial Public Class Form1
 		Inherits Form
+
 		Public Sub New()
 			InitializeComponent()
 		End Sub
 		Public Sub InitData()
+			Dim table As New DataTable()
+			table.Columns.Add(gridView1.Columns(0).FieldName, GetType(Integer))
+			table.Columns.Add(gridView1.Columns(1).FieldName, GetType(String))
+			table.Columns.Add(gridView1.Columns(2).FieldName, GetType(String))
+			table.Columns.Add(gridView1.Columns(3).FieldName, GetType(Image))
+			table.Columns.Add(gridView1.Columns(4).FieldName, GetType(Date))
+			table.Columns.Add(gridView1.Columns(5).FieldName, GetType(Boolean))
 			For i As Integer = 0 To 4
-				dataSet11.Tables(0).Rows.Add(New Object() { i, i, i, imageList1.Images(i)})
+				table.Rows.Add(New Object() { i, i, i, imageList1.Images(i), Date.Now })
 			Next i
+			gridControl1.DataSource = table
 		End Sub
 
-		Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+		Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 			InitData()
 		End Sub
 

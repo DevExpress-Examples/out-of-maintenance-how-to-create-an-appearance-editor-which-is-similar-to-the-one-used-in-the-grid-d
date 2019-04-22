@@ -25,8 +25,6 @@ namespace WindowsApplication3 {
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.customerInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet11 = new WindowsApplication3.DataSet1();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -43,23 +41,11 @@ namespace WindowsApplication3 {
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.customerInfoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // customerInfoBindingSource
-            // 
-            this.customerInfoBindingSource.DataMember = "CustomerInfo";
-            this.customerInfoBindingSource.DataSource = this.dataSet11;
-            // 
-            // dataSet11
-            // 
-            this.dataSet11.DataSetName = "DataSet1";
-            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // imageList1
             // 
@@ -75,14 +61,15 @@ namespace WindowsApplication3 {
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.customerInfoBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(548, 475);
+            this.gridControl1.Size = new System.Drawing.Size(858, 421);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -109,6 +96,7 @@ namespace WindowsApplication3 {
             this.colImage,
             this.colDate,
             this.colCheck});
+            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridView1_MouseDown);
@@ -116,44 +104,56 @@ namespace WindowsApplication3 {
             // colCustomerID
             // 
             this.colCustomerID.FieldName = "CustomerID";
+            this.colCustomerID.MinWidth = 15;
             this.colCustomerID.Name = "colCustomerID";
             this.colCustomerID.Visible = true;
             this.colCustomerID.VisibleIndex = 0;
+            this.colCustomerID.Width = 56;
             // 
             // colFirstName
             // 
             this.colFirstName.FieldName = "FirstName";
+            this.colFirstName.MinWidth = 15;
             this.colFirstName.Name = "colFirstName";
             this.colFirstName.Visible = true;
             this.colFirstName.VisibleIndex = 1;
+            this.colFirstName.Width = 56;
             // 
             // colLastName
             // 
             this.colLastName.FieldName = "LastName";
+            this.colLastName.MinWidth = 15;
             this.colLastName.Name = "colLastName";
             this.colLastName.Visible = true;
             this.colLastName.VisibleIndex = 2;
+            this.colLastName.Width = 56;
             // 
             // colImage
             // 
             this.colImage.FieldName = "Image";
+            this.colImage.MinWidth = 15;
             this.colImage.Name = "colImage";
             this.colImage.Visible = true;
             this.colImage.VisibleIndex = 3;
+            this.colImage.Width = 56;
             // 
             // colDate
             // 
             this.colDate.FieldName = "Date";
+            this.colDate.MinWidth = 15;
             this.colDate.Name = "colDate";
             this.colDate.Visible = true;
             this.colDate.VisibleIndex = 4;
+            this.colDate.Width = 56;
             // 
             // colCheck
             // 
             this.colCheck.FieldName = "Check";
+            this.colCheck.MinWidth = 15;
             this.colCheck.Name = "colCheck";
             this.colCheck.Visible = true;
             this.colCheck.VisibleIndex = 5;
+            this.colCheck.Width = 56;
             // 
             // barManager1
             // 
@@ -168,27 +168,39 @@ namespace WindowsApplication3 {
             // 
             // barDockControlTop
             // 
+            this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(548, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
+            this.barDockControlTop.Size = new System.Drawing.Size(858, 0);
             // 
             // barDockControlBottom
             // 
+            this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 475);
-            this.barDockControlBottom.Size = new System.Drawing.Size(548, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 421);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(858, 0);
             // 
             // barDockControlLeft
             // 
+            this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 475);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 421);
             // 
             // barDockControlRight
             // 
+            this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(548, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 475);
+            this.barDockControlRight.Location = new System.Drawing.Point(858, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 421);
             // 
             // barButtonItem1
             // 
@@ -206,32 +218,28 @@ namespace WindowsApplication3 {
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 475);
+            this.ClientSize = new System.Drawing.Size(858, 421);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.customerInfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-
-        private System.Windows.Forms.BindingSource customerInfoBindingSource;
-        private DataSet1 dataSet11;
         private System.Windows.Forms.ImageList imageList1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;

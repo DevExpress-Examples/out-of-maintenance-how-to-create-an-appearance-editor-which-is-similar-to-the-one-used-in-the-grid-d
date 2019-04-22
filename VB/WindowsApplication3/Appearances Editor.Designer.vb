@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Namespace WindowsApplication3
+﻿Namespace WindowsApplication3
 	Partial Public Class AppearancesEditor
 		''' <summary>
 		''' Required designer variable.
@@ -112,7 +110,8 @@ Namespace WindowsApplication3
 			Me.simpleButton2.StyleController = Me.layoutControl1
 			Me.simpleButton2.TabIndex = 11
 			Me.simpleButton2.Text = "Load Appearances"
-'			Me.simpleButton2.Click += New System.EventHandler(Me.OnLoadButtonClick);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton2.Click += new System.EventHandler(this.OnLoadButtonClick);
 			' 
 			' simpleButton1
 			' 
@@ -122,7 +121,8 @@ Namespace WindowsApplication3
 			Me.simpleButton1.StyleController = Me.layoutControl1
 			Me.simpleButton1.TabIndex = 10
 			Me.simpleButton1.Text = "Save Appearances"
-'			Me.simpleButton1.Click += New System.EventHandler(Me.OnSaveButtonClick);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton1.Click += new System.EventHandler(this.OnSaveButtonClick);
 			' 
 			' checkEdit4
 			' 
@@ -132,7 +132,8 @@ Namespace WindowsApplication3
 			Me.checkEdit4.Size = New System.Drawing.Size(209, 21)
 			Me.checkEdit4.StyleController = Me.layoutControl1
 			Me.checkEdit4.TabIndex = 9
-'			Me.checkEdit4.CheckedChanged += New System.EventHandler(Me.OnEnableAppearanceFocusedCellChanged);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.checkEdit4.CheckedChanged += new System.EventHandler(this.OnEnableAppearanceFocusedCellChanged);
 			' 
 			' checkEdit3
 			' 
@@ -142,7 +143,8 @@ Namespace WindowsApplication3
 			Me.checkEdit3.Size = New System.Drawing.Size(209, 21)
 			Me.checkEdit3.StyleController = Me.layoutControl1
 			Me.checkEdit3.TabIndex = 8
-'			Me.checkEdit3.CheckedChanged += New System.EventHandler(Me.OnEnableAppearanceFocusedRowChanged);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.checkEdit3.CheckedChanged += new System.EventHandler(this.OnEnableAppearanceFocusedRowChanged);
 			' 
 			' checkEdit2
 			' 
@@ -152,7 +154,8 @@ Namespace WindowsApplication3
 			Me.checkEdit2.Size = New System.Drawing.Size(209, 21)
 			Me.checkEdit2.StyleController = Me.layoutControl1
 			Me.checkEdit2.TabIndex = 7
-'			Me.checkEdit2.CheckedChanged += New System.EventHandler(Me.OnEnableAppearanceOddRowChanged);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.checkEdit2.CheckedChanged += new System.EventHandler(this.OnEnableAppearanceOddRowChanged);
 			' 
 			' checkEdit1
 			' 
@@ -162,7 +165,8 @@ Namespace WindowsApplication3
 			Me.checkEdit1.Size = New System.Drawing.Size(209, 21)
 			Me.checkEdit1.StyleController = Me.layoutControl1
 			Me.checkEdit1.TabIndex = 6
-'			Me.checkEdit1.CheckedChanged += New System.EventHandler(Me.OnEnableAppearanceEvenRowChanged);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.checkEdit1.CheckedChanged += new System.EventHandler(this.OnEnableAppearanceEvenRowChanged);
 			' 
 			' comboBoxEdit1
 			' 
@@ -172,7 +176,8 @@ Namespace WindowsApplication3
 			Me.comboBoxEdit1.Size = New System.Drawing.Size(149, 22)
 			Me.comboBoxEdit1.StyleController = Me.layoutControl1
 			Me.comboBoxEdit1.TabIndex = 5
-'			Me.comboBoxEdit1.EditValueChanged += New System.EventHandler(Me.comboBoxEdit1_EditValueChanged);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.comboBoxEdit1.EditValueChanged += new System.EventHandler(this.comboBoxEdit1_EditValueChanged);
 			' 
 			' layoutControlGroup1
 			' 

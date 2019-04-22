@@ -15,9 +15,17 @@ namespace WindowsApplication3 {
             InitializeComponent();
         }
         public void InitData() {
-            for(int i = 0;i < 5;i++) {
-                dataSet11.Tables[0].Rows.Add(new object[] { i, i, i, imageList1.Images[i]});
+            DataTable table = new DataTable();
+            table.Columns.Add(gridView1.Columns[0].FieldName, typeof(int));
+            table.Columns.Add(gridView1.Columns[1].FieldName, typeof(string));
+            table.Columns.Add(gridView1.Columns[2].FieldName, typeof(string));
+            table.Columns.Add(gridView1.Columns[3].FieldName, typeof(Image));
+            table.Columns.Add(gridView1.Columns[4].FieldName, typeof(DateTime));
+            table.Columns.Add(gridView1.Columns[5].FieldName, typeof(bool));
+            for (int i = 0;i < 5;i++) {
+                table.Rows.Add(new object[] { i, i, i, imageList1.Images[i], DateTime.Now });
             }
+            gridControl1.DataSource = table;
         }
 
         private void Form1_Load(object sender, EventArgs e) {

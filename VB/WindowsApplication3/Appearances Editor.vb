@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -59,7 +58,7 @@ Namespace WindowsApplication3
 		End Sub
 
 		Private Sub OnSaveButtonClick(ByVal sender As Object, ByVal e As EventArgs) Handles simpleButton1.Click
-			If saveFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+			If saveFileDialog1.ShowDialog() = DialogResult.OK Then
 				Try
 					view.Appearance.SaveLayoutToXml(saveFileDialog1.FileName)
 				Catch
@@ -68,7 +67,7 @@ Namespace WindowsApplication3
 		End Sub
 
 		Private Sub OnLoadButtonClick(ByVal sender As Object, ByVal e As EventArgs) Handles simpleButton2.Click
-			If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+			If openFileDialog1.ShowDialog() = DialogResult.OK Then
 				Try
 					view.Appearance.RestoreLayoutFromXml(openFileDialog1.FileName)
 				Catch
