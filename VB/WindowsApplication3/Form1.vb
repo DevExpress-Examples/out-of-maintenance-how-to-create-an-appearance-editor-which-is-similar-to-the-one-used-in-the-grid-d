@@ -22,10 +22,10 @@ Namespace WindowsApplication3
 			table.Columns.Add(gridView1.Columns(1).FieldName, GetType(String))
 			table.Columns.Add(gridView1.Columns(2).FieldName, GetType(String))
 			table.Columns.Add(gridView1.Columns(3).FieldName, GetType(Image))
-			table.Columns.Add(gridView1.Columns(4).FieldName, GetType(Date))
+			table.Columns.Add(gridView1.Columns(4).FieldName, GetType(DateTime))
 			table.Columns.Add(gridView1.Columns(5).FieldName, GetType(Boolean))
 			For i As Integer = 0 To 4
-				table.Rows.Add(New Object() { i, i, i, imageList1.Images(i), Date.Now })
+				table.Rows.Add(New Object() { i, i, i, imageList1.Images(i), DateTime.Now })
 			Next i
 			gridControl1.DataSource = table
 		End Sub
