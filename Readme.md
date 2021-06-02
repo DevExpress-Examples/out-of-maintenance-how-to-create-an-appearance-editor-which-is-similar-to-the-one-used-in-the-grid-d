@@ -1,8 +1,7 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [Appearances Editor.cs](./CS/WindowsApplication3/Appearances Editor.cs) (VB: [Appearances Editor.vb](./VB/WindowsApplication3/Appearances Editor.vb))
-* [DataSet1.cs](./CS/WindowsApplication3/DataSet1.cs) (VB: [DataSet1.vb](./VB/WindowsApplication3/DataSet1.vb))
+* [Appearances Editor.cs](./CS/WindowsApplication3/Appearances%20Editor.cs) (VB: [Appearances Editor.vb](./VB/WindowsApplication3/Appearances%20Editor.vb))
 * [Form1.cs](./CS/WindowsApplication3/Form1.cs) (VB: [Form1.vb](./VB/WindowsApplication3/Form1.vb))
 * [Program.cs](./CS/WindowsApplication3/Program.cs) (VB: [Program.vb](./VB/WindowsApplication3/Program.vb))
 <!-- default file list end -->
